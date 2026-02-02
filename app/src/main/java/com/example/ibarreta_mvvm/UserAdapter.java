@@ -41,7 +41,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         holder.emailTv.setText(user.getEmail());
         holder.initialsTv.setText(getInitials(user.getName()));
 
-        // Safe background tinting
         Drawable bg = holder.avatarView.getBackground();
         if (bg != null) {
             Drawable wrapped = DrawableCompat.wrap(bg);
@@ -55,8 +54,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     public int getItemCount() {
         return userList.size();
     }
-
-    // ---------- Helpers ----------
 
     private String getInitials(String name) {
         if (name == null || name.trim().isEmpty()) return "??";
