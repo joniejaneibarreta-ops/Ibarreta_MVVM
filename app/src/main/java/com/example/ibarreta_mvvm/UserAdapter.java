@@ -46,8 +46,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             Drawable wrapped = DrawableCompat.wrap(bg);
             DrawableCompat.setTint(wrapped, getColorFromName(user.getName()));
         }
-
-        holder.imageArrow.setAlpha(0.5f);
     }
 
     @Override
@@ -81,7 +79,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     static class UserViewHolder extends RecyclerView.ViewHolder {
         TextView nameTv, emailTv, initialsTv;
         View avatarView;
-        ImageView imageArrow;
 
         UserViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,7 +86,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             emailTv = itemView.findViewById(R.id.textEmail);
             initialsTv = itemView.findViewById(R.id.textInitials);
             avatarView = itemView.findViewById(R.id.avatarBackground);
-            imageArrow = itemView.findViewById(R.id.imageArrow);
         }
     }
 }
